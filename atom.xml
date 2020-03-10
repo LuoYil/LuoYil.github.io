@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-03-10T12:15:04.507Z</updated>
+    <updated>2020-03-10T13:07:39.001Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -43,6 +43,40 @@
 <blockquote>
 <p>另外，我将我所使用的整合包上传到了我的QQ群中，需要可以去下载</p>
 </blockquote>
+<h1 id="二-基本原理">二、基本原理</h1>
+<hr>
+<h2 id="1音符盒基础">1.音符盒基础</h2>
+<h3 id="1音符盒">（1）音符盒：</h3>
+<p>音符盒在接受红石信号或者被玩家点击后会根据它下面的方块种类而发出不同音色的声音。右键音符盒可以改变音符盒的音高。</p>
+<ul>
+<li>以下为音符盒音色，音域及其它信息</li>
+<li>在音符盒下面放置这些方块可以改变音符盒音色</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方块</th>
+<th>音色</th>
+<th>音域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金块</td>
+<td>铃铛</td>
+<td>F♯5–F♯7</td>
+</tr>
+<tr>
+<td>其它</td>
+<td>竖琴</td>
+<td>F♯3–F♯5</td>
+</tr>
+</tbody>
+</table>
+<p>更多可以查阅 <a href="https://minecraft-zh.gamepedia.com/%E9%9F%B3%E7%AC%A6%E7%9B%92">音符盒</a> 页面</p>
+<p>（2）音符盒音高：<br>
+每右键音符盒一次，音符盒音高+1。下图为对应音高需要右键的次数。<br>
+<img src="https://minecraft-zh.gamepedia.com/File:Noteblock_reference.png" alt="音符盒音高点击次数对照"></p>
 ]]></content>
     </entry>
 </feed>
