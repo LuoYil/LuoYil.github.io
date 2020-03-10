@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-03-10T13:23:44.838Z</updated>
+    <updated>2020-03-10T13:53:34.822Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -83,9 +83,55 @@
 <p>每右键音符盒一次，音符盒音高+1。下图为对应音高需要右键的次数。<br>
 <img src="https://minecraft-zh.gamepedia.com/File:Noteblock_reference.png" alt="音符盒音高点击次数对照"><br>
 <code>红石音乐</code> 页面有所有音色对应音域及点击次数表。</p>
-<h3 id="3五线谱">（3）五线谱</h3>
+<h3 id="3五线谱-可选">（3）五线谱 （可选）</h3>
 <p>这是一段<code>Da Da Da Piano solo</code>的乐谱<br>
 <img src="https://luoyil.github.io//post-images/1583846548419.png" alt="乐谱图片"></p>
+<blockquote>
+<p>由于内容较多，关于五线谱读法建议去网上查看教程，这里只会提及部分<br>
+另外，如果实在不会可以看之后的mid读法。</p>
+</blockquote>
+<h4 id="1曲速bpm">1.曲速（BPM）：</h4>
+<p><code>BPM</code> = Beat Per Minute，每分钟节拍数的单位。<br>
+上图中就代表这首歌的BPM为174（音符图标的等号后）<br>
+先作为了解，等会讲在游戏中如何对应</p>
+<h4 id="2线">2.线：</h4>
+<p>在五线谱上，<code>音的高低</code>是根据<code>音符符头</code>在五线谱上的<code>位置</code>而定的。<br>
+位置越高音越高，位置越低音越低。<br>
+音符的符头可以记在<code>线上或间</code>内。（间：指两条线之间）<br>
+为了记录更高或更低的音，在五线谱的上面或下面还要加上许多短线，<br>
+这些短线，就叫 做<code>加线</code>。<br>
+如图：<br>
+<img src="https://luoyil.github.io//post-images/1583847328944.png" alt="线"></p>
+<h4 id="3谱号">3.谱号：</h4>
+<p><img src="https://luoyil.github.io//post-images/1583847540170.png" alt="谱号图片"><br>
+这两个符号分别代表高音谱号（G谱号），低音谱号（F谱号）<br>
+G谱号圈住的那一条线的音高就是G，F谱号的两点“：”之间的线音高就是F<br>
+下图标出了部分音高在五线谱上的对应：<br>
+<img src="https://luoyil.github.io//post-images/1583847556521.png" alt="音高在线上的对应图"></p>
+<h4 id="4变音记号">4.变音记号：</h4>
+<p>表示音级的升高或降低的记号，叫做“变音记号”。<br>
+变音记号有五种：<br>
+<img src="https://luoyil.github.io//post-images/1583847659534.png" alt="变音记号"><br>
+变音记号可以记在线上或间上。<br>
+记在谱号后面的变音记号，叫做“调号”。<br>
+调号中的变音记号，在未改变调号之前，对乐音体系中所有同名音，<br>
+不管哪个音组，都有效。<br>
+比如说我在音高为C的那一条线上加了一个升号，那么在未改变调号之前所有的C都变为升C（C#），不管是C1,C2...都要变为相应的C#1，C#2...</p>
+<h4 id="5常见符号">5.常见符号</h4>
+<p><img src="https://luoyil.github.io//post-images/1583847783461.png" alt="常见音符"><br>
+<img src="https://luoyil.github.io//post-images/1583847796874.png" alt="附点音符"></p>
+<h4 id="6中央c">6.中央C：</h4>
+<p>中央C有多种定义，一般定位C4，在FL软件中为C5，其它自行查阅。<br>
+G谱号的下加一线为中央C，F谱号上加一线也是中央C。</p>
+<h2 id="2试着用音符盒来做一段音乐">2.试着用音符盒来做一段音乐</h2>
+<p>一般步骤为：</p>
+<pre><code>1.读谱，确定音符盒点击次数
+2.根据音符类型，BPM，利用中继器控制每个音的间隔时间
+</code></pre>
+<p>1.先来读谱<br>
+上面那行为：B5， B5， B5， F#6...<br>
+下面那行为：E4， B4， E5， F#5...<br>
+你可以去上面的音高表查找需要敲击音符盒次数</p>
 ]]></content>
     </entry>
 </feed>
