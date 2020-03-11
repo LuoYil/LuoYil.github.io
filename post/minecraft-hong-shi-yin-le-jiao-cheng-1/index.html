@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Minecraft-红石音乐教程#1 | LuoYi Blog</title>
-<link rel="shortcut icon" href="https://luoyil.github.io//favicon.ico?v=1583897871993">
+<link rel="shortcut icon" href="https://luoyil.github.io//favicon.ico?v=1583897995000">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://luoyil.github.io//styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -239,38 +239,43 @@ G谱号的下加一线为中央C，F谱号上加一线也是中央C。</p>
 <li>指令：/tickrate <code>tick</code><br>
 原版是每秒20tick,每tick时长为0.05秒，174是150的1.16倍，那将刚才的速度变为原曲速度则输入/tickrate 23.2 (20 X 1.16得出)</li>
 </ul>
-<center>--------------------音符盒基础-完---------------------</center>
-## 2.命令方块基础
-### 0.获得一个命令方块
-`/give @p command_block`
-### 1.playsound命令
-参考[playsound](https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4/playsound)  
-格式`playsound <声音> <来源> <玩家> [x] [y] [z] [音量] [音调] [最小音量]`
-例子：
-调用原版音符盒音色：
-`/playsound minecraft:block.note.chime voice @p ~ ~ ~ 1 1`
-调用指定资源包音色：
-可以在`\assets\minecraft`下找到`sounds.json`这个文件中存放了声音事件名与文件路径。
-如我的FL Keys资源包：
-这是第一行`"piano.1":{"sounds":[{"name":"piano.1"}]},`
-`piano.1`是声音名代表钢琴第一个键（A0，FL中为A1，21）， `"name":"piano.1`这是文件所在路径。
-调用它的命令为：
-`/playsound piano.1 voice @p ~ ~ ~ 1 1`
-### 2.FL中mid读法
-1.拖拽一个mid文件至FL可以将它导入，点击左边的音轨可以打开钢琴窗口，鼠标指向一个音符时左上角会有音高显示。
-![FL](https://luoyil.github.io//post-images/1583897433020.png)  
-### 3.配合资源包制作音乐
-根据资源包不同，大多作者都会说明哪个文件是哪一个音高。
-比如我的FL Keys，`piano.1`为音高21，那之前的乐谱数字音高为83，83，83，90...
-写成play sound命令依次为：
->`/playsound piano.63 voice @p ~ ~ ~ 1 1`
->`/playsound piano.63 voice @p ~ ~ ~ 1 1`
->`/playsound piano.63 voice @p ~ ~ ~ 1 1`
->`/playsound piano.69 voice @p ~ ~ ~ 1 1`
-* 使用这类资源包没有音域限制，可以直接读音高然后写成命令，每个音间隔处理和音符盒相同。
+<center>--------------------音符盒基础-完---------------------</center>  
+<h2 id="2命令方块基础">2.命令方块基础</h2>
+<h3 id="0获得一个命令方块">0.获得一个命令方块</h3>
+<p><code>/give @p command_block</code></p>
+<h3 id="1playsound命令">1.playsound命令</h3>
+<p>参考<a href="https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4/playsound">playsound</a><br>
+格式<code>playsound &lt;声音&gt; &lt;来源&gt; &lt;玩家&gt; [x] [y] [z] [音量] [音调] [最小音量]</code><br>
+例子：<br>
+调用原版音符盒音色：<br>
+<code>/playsound minecraft:block.note.chime voice @p ~ ~ ~ 1 1</code><br>
+调用指定资源包音色：<br>
+可以在<code>\assets\minecraft</code>下找到<code>sounds.json</code>这个文件中存放了声音事件名与文件路径。<br>
+如我的FL Keys资源包：<br>
+这是第一行<code>&quot;piano.1&quot;:{&quot;sounds&quot;:[{&quot;name&quot;:&quot;piano.1&quot;}]},</code><br>
+<code>piano.1</code>是声音名代表钢琴第一个键（A0，FL中为A1，21）， <code>&quot;name&quot;:&quot;piano.1</code>这是文件所在路径。<br>
+调用它的命令为：<br>
+<code>/playsound piano.1 voice @p ~ ~ ~ 1 1</code></p>
+<h3 id="2fl中mid读法">2.FL中mid读法</h3>
+<p>1.拖拽一个mid文件至FL可以将它导入，点击左边的音轨可以打开钢琴窗口，鼠标指向一个音符时左上角会有音高显示。<br>
+<img src="https://luoyil.github.io//post-images/1583897433020.png" alt="FL"></p>
+<h3 id="3配合资源包制作音乐">3.配合资源包制作音乐</h3>
+<p>根据资源包不同，大多作者都会说明哪个文件是哪一个音高。<br>
+比如我的FL Keys，<code>piano.1</code>为音高21，那之前的乐谱数字音高为83，83，83，90...<br>
+写成play sound命令依次为：</p>
+<blockquote>
+<p><code>/playsound piano.63 voice @p ~ ~ ~ 1 1</code><br>
+<code>/playsound piano.63 voice @p ~ ~ ~ 1 1</code><br>
+<code>/playsound piano.63 voice @p ~ ~ ~ 1 1</code><br>
+<code>/playsound piano.69 voice @p ~ ~ ~ 1 1</code></p>
+</blockquote>
+<ul>
+<li>使用这类资源包没有音域限制，可以直接读音高然后写成命令，每个音间隔处理和音符盒相同。</li>
+</ul>
 <center>--------------------基本原理-完---------------------</center>
-现在你可以去制作你喜欢的音乐了`(*^▽^*)`
-                                                                     写于2020-3-10~11.下期再见。
+现在你可以去制作你喜欢的音乐了`(*^▽^*)`  
+<pre><code>                                                                 写于2020-3-10~11.下期再见。</code></pre>
+
                 </div>
             </article>
         </div>
