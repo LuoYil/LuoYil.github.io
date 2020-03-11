@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-03-11T03:42:59.666Z</updated>
+    <updated>2020-03-11T03:49:27.790Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -186,6 +186,9 @@ G谱号的下加一线为中央C，F谱号上加一线也是中央C。</p>
 <ul>
 <li>使用这类资源包没有音域限制，可以直接读音高然后写成命令，每个音间隔处理和音符盒相同。</li>
 </ul>
+<h3 id="4注意">4.注意：</h3>
+<p>由于人物移动，直接像这样写命令声音会在命令方块所在位置播放，建议加个<code>execute</code>嵌套，使playsound命令执行位置始终为玩家。<br>
+参考页面：<a href="https://minecraft-zh.gamepedia.com/%E5%91%BD%E4%BB%A4/execute">execute</a></p>
 <center>--------------------基本原理-完---------------------</center>  
 <p>现在你可以去制作你喜欢的音乐了<code>(*^▽^*)</code></p>
 <blockquote>
