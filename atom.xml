@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-03-11T03:41:14.748Z</updated>
+    <updated>2020-03-11T03:42:13.738Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -186,9 +186,11 @@ G谱号的下加一线为中央C，F谱号上加一线也是中央C。</p>
 <ul>
 <li>使用这类资源包没有音域限制，可以直接读音高然后写成命令，每个音间隔处理和音符盒相同。</li>
 </ul>
-<center>--------------------基本原理-完---------------------</center>
-现在你可以去制作你喜欢的音乐了`(*^▽^*)`  
-<pre><code>                                                                 写于2020-3-10~11.下期再见。</code></pre>
+<center>--------------------基本原理-完---------------------</center>  
+<p>现在你可以去制作你喜欢的音乐了<code>(*^▽^*)</code></p>
+<blockquote>
+<p>写于2020-3-10~11.下期再见。</p>
+</blockquote>
 ]]></content>
     </entry>
 </feed>
