@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-03-11T03:49:34.797Z</updated>
+    <updated>2020-06-26T05:47:32.577Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://luoyil.github.io//images/avatar.png</logo>
     <icon>https://luoyil.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, LuoYi Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[image test]]></title>
+        <id>https://luoyil.github.io//post/image-test</id>
+        <link href="https://luoyil.github.io//post/image-test">
+        </link>
+        <updated>2020-06-26T05:46:21.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://luoyil.github.io//post-images/1593150435451.jpg" alt=""></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Minecraft-红石音乐教程#1]]></title>
         <id>https://luoyil.github.io//post/minecraft-hong-shi-yin-le-jiao-cheng-1</id>
