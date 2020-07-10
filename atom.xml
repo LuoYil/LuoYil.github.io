@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-06-26T05:48:05.862Z</updated>
+    <updated>2020-07-10T09:49:07.762Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -10,6 +10,496 @@
     <logo>https://luoyil.github.io//images/avatar.png</logo>
     <icon>https://luoyil.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, LuoYi Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[MC-CmdAnimeEngine 使用说明]]></title>
+        <id>https://luoyil.github.io//post/mc-cmdanimeengine-shi-yong-shuo-ming</id>
+        <link href="https://luoyil.github.io//post/mc-cmdanimeengine-shi-yong-shuo-ming">
+        </link>
+        <updated>2020-07-10T08:06:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>一个基于Minecraft 原版指令的动画引擎</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一个基于Minecraft 原版指令的动画引擎</p>
+<!-- more -->
+<h1 id="一-particle-模块">一、particle 模块</h1>
+<hr>
+<h2 id="功能基于简单的数学运算生成几何图形-图片等粒子指令">功能：基于简单的数学运算生成几何图形、图片等粒子指令</h2>
+<hr>
+<h2 id="代码说明">代码说明：</h2>
+<ol>
+<li>
+<h3 id="class-particlecommand用于创建命令对象">class ParticleCommand:用于创建命令对象</h3>
+</li>
+</ol>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tick</td>
+<td>int</td>
+</tr>
+<tr>
+<td>command</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>
+<h3 id="class-particlemath坐标数学运算类">class ParticleMath：坐标数学运算类</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>distance：获取两点距离<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1,p2</td>
+<td>list</td>
+<td>包含xyz的列表，如<code>[0, 0, 0]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>vec_unit：向量单位化</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1,p2</td>
+<td>list</td>
+<td>空间坐标点，如<code>[0, 0, 0]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>midpoint：点列中点计算</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>move：移动点列</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>x, y, z</td>
+<td>float</td>
+<td>坐标移动量</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>ani_move：通过两个点列中每个点距离差计算粒子初速度</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_1，2</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+</tbody>
+</table>
+<p>返回：motion_list （每个粒子的初速度列表，与参数中点列格式一致）供粒子移动动画使用。<br>
+6. ani_spread_from_point：计算粒子从一个点扩散开各自所需初速度<br>
+参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>x, y, z</td>
+<td>float</td>
+<td>扩散中心坐标</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>float</td>
+<td>缩放程度</td>
+</tr>
+</tbody>
+</table>
+<p>返回：motion_list</p>
+<ol start="3">
+<li>
+<h3 id="class-particlegeometry几何图形坐标计算">class ParticleGeometry：几何图形坐标计算</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>line：生成连接两点的直线坐标</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1, y1, z1, x2, y2, z2</td>
+<td>float</td>
+<td>两点坐标</td>
+</tr>
+</tbody>
+</table>
+<p>返回：点列</p>
+<ol start="4">
+<li>
+<h3 id="class-particleimg图片导入">class ParticleImg：图片导入</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>load_img：读取图片像素点坐标<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>text</td>
+<td>图片名（图片需存放于images文件夹下）</td>
+</tr>
+<tr>
+<td>x0, y0, z0</td>
+<td>float</td>
+<td>生成位置坐标</td>
+</tr>
+<tr>
+<td>zoom_level</td>
+<td>float</td>
+<td>图片缩放程度，推荐5</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>
+<h3 id="class-particlecommandgenerator指令生成">class ParticleCommandGenerator：指令生成</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>text</td>
+<td>图片名（图片需存放于images文件夹下）</td>
+</tr>
+<tr>
+<td>x0, y0, z0</td>
+<td>float</td>
+<td>生成位置坐标</td>
+</tr>
+<tr>
+<td>zoom_level</td>
+<td>float</td>
+<td>图片缩放程度，推荐5</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>static_particle：生成静态粒子命令<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start_tick, end_tick</td>
+<td>int</td>
+<td>动画开始时间与结束时间</td>
+</tr>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>motion</td>
+<td>text</td>
+<td>粒子范围，需特殊格式，如<code>&quot;0 0 0&quot;</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>int</td>
+<td>粒子数量</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>point_motion_particle：生成粒子动画(同起点运动)<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tick</td>
+<td>int</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>motion_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>position</td>
+<td>text</td>
+<td>动画生成位置，需特殊格式，如<code>0 0 0</code>，这里将会填入/particle <code>x y z</code> 中</td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>motion_particle：生成粒子动画（不同起点运动）<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>motion_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>tick</td>
+<td>int</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>
+<h3 id="class-fireworkcommand烟花类">class FireworkCommand：烟花类</h3>
+</li>
+</ol>
+<h1 id="二-function-模块">二、function 模块</h1>
+<hr>
+<h2 id="功能将其它模块生成的指令处理后按tick导出为mcfunction文件-用于游戏内执行指令序列">功能：将其它模块生成的指令处理后按tick导出为mcfunction文件。用于游戏内执行指令序列。</h2>
+<hr>
+<h2 id="代码说明-2">代码说明：</h2>
+<h3 id="class-function创建该对象时需要一个序列长度即使用其它模块生成的命令一共需要执行的tick时长">class Function：创建该对象时需要一个序列长度，即使用其它模块生成的命令一共需要执行的tick时长</h3>
+<p>例：以下代码创建了一个20Tick的直线粒子动画，并将其导出为mcfunction。</p>
+<pre><code># 导入particle模块， function模块
+import particle
+import function as fs
+# 创建粒子几何运算对象
+pg = particle.ParticleGeometry(0.1)
+# 创建粒子指令生成工具对象
+pcmd = particle.ParticleCommandGenerator(0.1)
+
+# 创建一条从0, 0, 0到 10, 10, 10直线
+line = pg.line(0, 0, 0, 10, 10, 10)
+# 使用粒子命令生成工具生成指令列表
+pcmd.static_particle(0, 20, line, 'endRod', '0 0 0', 0, 1)
+# 将生成后的指令列表赋于变量 'command_list'
+command_list = pcmd.particle_cmd_list
+# 创建函数对象
+function = fs.Function(21)
+# 创建空序列，用于存放指令
+function.create_null_list()
+# 创建指令序列
+function.create_sequence(command_list)
+# 导出函数至 'ly' 文件夹
+function.save_file('ly')
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[image test]]></title>
         <id>https://luoyil.github.io//post/image-test</id>

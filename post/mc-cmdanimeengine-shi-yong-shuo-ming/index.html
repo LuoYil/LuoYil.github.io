@@ -1,0 +1,623 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MC-CmdAnimeEngine 使用说明 | LuoYi Blog</title>
+<link rel="shortcut icon" href="https://luoyil.github.io//favicon.ico?v=1594374390303">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://luoyil.github.io//styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            LuoYi Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    MC-CmdAnimeEngine 使用说明
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-07-10 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一个基于Minecraft 原版指令的动画引擎</p>
+<!-- more -->
+<h1 id="一-particle-模块">一、particle 模块</h1>
+<hr>
+<h2 id="功能基于简单的数学运算生成几何图形-图片等粒子指令">功能：基于简单的数学运算生成几何图形、图片等粒子指令</h2>
+<hr>
+<h2 id="代码说明">代码说明：</h2>
+<ol>
+<li>
+<h3 id="class-particlecommand用于创建命令对象">class ParticleCommand:用于创建命令对象</h3>
+</li>
+</ol>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tick</td>
+<td>int</td>
+</tr>
+<tr>
+<td>command</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>
+<h3 id="class-particlemath坐标数学运算类">class ParticleMath：坐标数学运算类</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>distance：获取两点距离<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1,p2</td>
+<td>list</td>
+<td>包含xyz的列表，如<code>[0, 0, 0]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>vec_unit：向量单位化</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p1,p2</td>
+<td>list</td>
+<td>空间坐标点，如<code>[0, 0, 0]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>midpoint：点列中点计算</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>move：移动点列</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>x, y, z</td>
+<td>float</td>
+<td>坐标移动量</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>ani_move：通过两个点列中每个点距离差计算粒子初速度</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_1，2</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+</tbody>
+</table>
+<p>返回：motion_list （每个粒子的初速度列表，与参数中点列格式一致）供粒子移动动画使用。<br>
+6. ani_spread_from_point：计算粒子从一个点扩散开各自所需初速度<br>
+参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>x, y, z</td>
+<td>float</td>
+<td>扩散中心坐标</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>float</td>
+<td>缩放程度</td>
+</tr>
+</tbody>
+</table>
+<p>返回：motion_list</p>
+<ol start="3">
+<li>
+<h3 id="class-particlegeometry几何图形坐标计算">class ParticleGeometry：几何图形坐标计算</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>line：生成连接两点的直线坐标</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1, y1, z1, x2, y2, z2</td>
+<td>float</td>
+<td>两点坐标</td>
+</tr>
+</tbody>
+</table>
+<p>返回：点列</p>
+<ol start="4">
+<li>
+<h3 id="class-particleimg图片导入">class ParticleImg：图片导入</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>precision</td>
+<td>float</td>
+<td>计算精度，越小粒子越密集</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>load_img：读取图片像素点坐标<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>text</td>
+<td>图片名（图片需存放于images文件夹下）</td>
+</tr>
+<tr>
+<td>x0, y0, z0</td>
+<td>float</td>
+<td>生成位置坐标</td>
+</tr>
+<tr>
+<td>zoom_level</td>
+<td>float</td>
+<td>图片缩放程度，推荐5</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>
+<h3 id="class-particlecommandgenerator指令生成">class ParticleCommandGenerator：指令生成</h3>
+</li>
+</ol>
+<p>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>text</td>
+<td>图片名（图片需存放于images文件夹下）</td>
+</tr>
+<tr>
+<td>x0, y0, z0</td>
+<td>float</td>
+<td>生成位置坐标</td>
+</tr>
+<tr>
+<td>zoom_level</td>
+<td>float</td>
+<td>图片缩放程度，推荐5</td>
+</tr>
+</tbody>
+</table>
+<p>功能：</p>
+<ol>
+<li>static_particle：生成静态粒子命令<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start_tick, end_tick</td>
+<td>int</td>
+<td>动画开始时间与结束时间</td>
+</tr>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>motion</td>
+<td>text</td>
+<td>粒子范围，需特殊格式，如<code>&quot;0 0 0&quot;</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>int</td>
+<td>粒子数量</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>point_motion_particle：生成粒子动画(同起点运动)<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tick</td>
+<td>int</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>motion_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>position</td>
+<td>text</td>
+<td>动画生成位置，需特殊格式，如<code>0 0 0</code>，这里将会填入/particle <code>x y z</code> 中</td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>motion_particle：生成粒子动画（不同起点运动）<br>
+参数：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>motion_list</td>
+<td>list</td>
+<td>点列，如<code>[[0, 0, 0], [0, 1, 0]]</code></td>
+</tr>
+<tr>
+<td>tick</td>
+<td>int</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+<td>粒子名，如<code>fireworksSpark</code></td>
+</tr>
+<tr>
+<td>speed</td>
+<td>float</td>
+<td>粒子速度</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>
+<h3 id="class-fireworkcommand烟花类">class FireworkCommand：烟花类</h3>
+</li>
+</ol>
+<h1 id="二-function-模块">二、function 模块</h1>
+<hr>
+<h2 id="功能将其它模块生成的指令处理后按tick导出为mcfunction文件-用于游戏内执行指令序列">功能：将其它模块生成的指令处理后按tick导出为mcfunction文件。用于游戏内执行指令序列。</h2>
+<hr>
+<h2 id="代码说明-2">代码说明：</h2>
+<h3 id="class-function创建该对象时需要一个序列长度即使用其它模块生成的命令一共需要执行的tick时长">class Function：创建该对象时需要一个序列长度，即使用其它模块生成的命令一共需要执行的tick时长</h3>
+<p>例：以下代码创建了一个20Tick的直线粒子动画，并将其导出为mcfunction。</p>
+<pre><code># 导入particle模块， function模块
+import particle
+import function as fs
+# 创建粒子几何运算对象
+pg = particle.ParticleGeometry(0.1)
+# 创建粒子指令生成工具对象
+pcmd = particle.ParticleCommandGenerator(0.1)
+
+# 创建一条从0, 0, 0到 10, 10, 10直线
+line = pg.line(0, 0, 0, 10, 10, 10)
+# 使用粒子命令生成工具生成指令列表
+pcmd.static_particle(0, 20, line, 'endRod', '0 0 0', 0, 1)
+# 将生成后的指令列表赋于变量 'command_list'
+command_list = pcmd.particle_cmd_list
+# 创建函数对象
+function = fs.Function(21)
+# 创建空序列，用于存放指令
+function.create_null_list()
+# 创建指令序列
+function.create_sequence(command_list)
+# 导出函数至 'ly' 文件夹
+function.save_file('ly')
+
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://luoyil.github.io//post/image-test" class="post-title gt-a-link">
+                    image test
+                </a>
+            </div>
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">LuoYi's Test Blog</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://luoyil.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>
