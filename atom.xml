@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-07-10T09:49:34.260Z</updated>
+    <updated>2020-07-19T03:58:54.325Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -320,19 +320,9 @@
 </thead>
 <tbody>
 <tr>
-<td>filename</td>
-<td>text</td>
-<td>图片名（图片需存放于images文件夹下）</td>
-</tr>
-<tr>
-<td>x0, y0, z0</td>
+<td>precision</td>
 <td>float</td>
-<td>生成位置坐标</td>
-</tr>
-<tr>
-<td>zoom_level</td>
-<td>float</td>
-<td>图片缩放程度，推荐5</td>
+<td>计算精度，越小粒子越密集</td>
 </tr>
 </tbody>
 </table>
@@ -501,12 +491,13 @@ function.save_file('ly')
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[image test]]></title>
+        <title type="html"><![CDATA[image bed test]]></title>
         <id>https://luoyil.github.io//post/image-test</id>
         <link href="https://luoyil.github.io//post/image-test">
         </link>
         <updated>2020-06-26T05:46:21.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://luoyil.github.io//post-images/1593150435451.jpg" alt=""></p>
+        <content type="html"><![CDATA[<p><img src="https://luoyil.github.io//post-images/1593150435451.jpg" alt=""><br>
+<img src="https://luoyil.github.io//post-images/1595131122516.png" alt=""></p>
 ]]></content>
     </entry>
     <entry>
