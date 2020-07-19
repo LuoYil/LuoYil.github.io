@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://luoyil.github.io/</id>
     <title>LuoYi Blog</title>
-    <updated>2020-07-19T03:58:54.325Z</updated>
+    <updated>2020-07-19T04:20:52.572Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://luoyil.github.io/"/>
     <link rel="self" href="https://luoyil.github.io//atom.xml"/>
@@ -497,7 +497,8 @@ function.save_file('ly')
         </link>
         <updated>2020-06-26T05:46:21.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://luoyil.github.io//post-images/1593150435451.jpg" alt=""><br>
-<img src="https://luoyil.github.io//post-images/1595131122516.png" alt=""></p>
+<img src="https://luoyil.github.io//post-images/1595132443848.png" alt=""><br>
+<img src="https://luoyil.github.io//post-images/1595132446462.png" alt=""></p>
 ]]></content>
     </entry>
     <entry>
